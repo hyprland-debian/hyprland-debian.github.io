@@ -1,0 +1,15 @@
+Package: hyprutils
+Version: 0.1.5
+Architecture: amd64
+Maintainer: John Doe <john@doe.org>
+Installed-Size: 117
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libpixman-1-0 (>= 0.25.2), libstdc++6 (>= 13)
+Filename: ./hyprutils_0.1.5_amd64.deb
+Size: 26416
+MD5sum: 103a79149a0d3a6d26fe987dc94625b6
+SHA1: d4dc05a8935f52cc52cb2dc366b8708d88534097
+SHA256: 3a076f124ccb5cf3917f830ab365ba5c2584cfc51966101243638dd41786aee7
+Section: utils
+Priority: extra
+Description: Hyprutils is a small C++ library for utilities used across the Hypr* ecosystem.
+
