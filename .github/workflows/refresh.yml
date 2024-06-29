@@ -12,6 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: import GPG key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" > private.key
+          gpg --import --no-tty --batch private.key
+          rm -f private.key
+
+      - name: show GPG keys
+        run: gpg -K
+
       - run: rm -f *.deb
     
       - run: ./download-latest-deb.sh hyprland-debian/hyprutils-deb
@@ -20,8 +29,10 @@ jobs:
 
       - run: dpkg-scanpackages --multiversion . > Packages
       - run: gzip -k -f Packages
-
       - run: apt-ftparchive release . > Release
+
+      - run: gpg --pinentry-mode loopback --passphrase="${{ secrets.GPG_PASSPHRASE }}" --batch --yes --default-key "ibylich@gmail.com" -abs -o - Release > Release.gpg
+      - run: gpg --pinentry-mode loopback --passphrase="${{ secrets.GPG_PASSPHRASE }}" --batch --yes --default-key "ibylich@gmail.com" --clearsign -o - Release > InRelease
 
       - name: show diff
         run: git diff --name-only
