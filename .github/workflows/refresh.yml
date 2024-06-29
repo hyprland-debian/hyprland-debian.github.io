@@ -26,6 +26,7 @@ jobs:
       - run: ./download-latest-deb.sh hyprland-debian/hyprutils-deb
       - run: ./download-latest-deb.sh hyprland-debian/hyprcursor-deb
       - run: ./download-latest-deb.sh hyprland-debian/hyprwayland-scanner-deb
+      - run: ./download-latest-deb.sh hyprland-debian/hyprland-deb
 
       - run: dpkg-scanpackages --multiversion . > Packages
       - run: gzip -k -f Packages
