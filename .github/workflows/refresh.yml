@@ -1,0 +1,33 @@
+name: refresh
+
+on: workflow_dispatch
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: rm -f *.deb
+    
+      - run: ./download-latest-deb.sh hyprland-debian/hyprutils-deb
+
+      - run: dpkg-scanpackages --multiversion . > Packages
+      - run: gzip -k -f Packages
+
+      - run: apt-ftparchive release . > Release
+
+      - name: show diff
+        run: git diff --name-only
+
+      - name: commit & push
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .
+          git commit -m 'update index'
+          git push
