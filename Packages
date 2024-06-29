@@ -1,3 +1,18 @@
+Package: hyprcursor
+Version: 0.1.9
+Architecture: amd64
+Maintainer: John Doe <john@doe.org>
+Installed-Size: 663
+Depends: libc6 (>= 2.38), libcairo2 (>= 1.2.4), libgcc-s1 (>= 4.3), libhyprlang2 (>= 0.5.1), librsvg2-2 (>= 2.46.0), libstdc++6 (>= 13.1), libtomlplusplus3t64 (>= 3.2.0), libzip4t64 (>= 1.0)
+Filename: ./hyprcursor_0.1.9_amd64.deb
+Size: 179068
+MD5sum: 85198d2f09d8c25bef45a9f1145ccb48
+SHA1: b002dcff90531da9302d01a65bd48d3ad2191a27
+SHA256: 2986580af7c9bde4663630a7dbc04a0bb850c31db30a100f08fc2a0f2fc06ff2
+Section: utils
+Priority: extra
+Description: The hyprland cursor format, library and utilities.
+
 Package: hyprutils
 Version: 0.1.5
 Architecture: amd64
@@ -12,4 +27,19 @@ SHA256: 3a076f124ccb5cf3917f830ab365ba5c2584cfc51966101243638dd41786aee7
 Section: utils
 Priority: extra
 Description: Hyprutils is a small C++ library for utilities used across the Hypr* ecosystem.
+
+Package: hyprwayland-scanner
+Version: 0.3.10
+Architecture: amd64
+Maintainer: John Doe <john@doe.org>
+Installed-Size: 182
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.3), libpugixml1v5 (>= 1.4), libstdc++6 (>= 13.1)
+Filename: ./hyprwayland-scanner_0.3.10_amd64.deb
+Size: 61772
+MD5sum: b04175e624d7165c44099d39643d85d0
+SHA1: 5ae6ec89067c887dd9ac8a30d4483e06de8ceda3
+SHA256: 0c348803e2d1dbb1b518f522d7cd85534a72f02fb7bf48363ef5926175a7b4f2
+Section: utils
+Priority: extra
+Description: A Hyprland implementation of wayland-scanner, in and for C++.
 
