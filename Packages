@@ -44,16 +44,16 @@ Priority: extra
 Description: Hyprutils is a small C++ library for utilities used across the Hypr* ecosystem.
 
 Package: hyprwayland-scanner
-Version: 0.3.10
+Version: 0.4.0
 Architecture: amd64
 Maintainer: John Doe <john@doe.org>
-Installed-Size: 182
+Installed-Size: 178
 Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.3), libpugixml1v5 (>= 1.4), libstdc++6 (>= 13.1)
-Filename: ./hyprwayland-scanner_0.3.10_amd64.deb
-Size: 61772
-MD5sum: b04175e624d7165c44099d39643d85d0
-SHA1: 5ae6ec89067c887dd9ac8a30d4483e06de8ceda3
-SHA256: 0c348803e2d1dbb1b518f522d7cd85534a72f02fb7bf48363ef5926175a7b4f2
+Filename: ./hyprwayland-scanner_0.4.0_amd64.deb
+Size: 62908
+MD5sum: 93dbf51e8a0b5495029b363fe363489a
+SHA1: ab6e7f6138220a557b006547f5704f901ea7b24b
+SHA256: ad32d62d077d69f7c121b7ffc551e9767963ef3ae0447d956a5a2cdd4d0be846
 Section: utils
 Priority: extra
 Description: A Hyprland implementation of wayland-scanner, in and for C++.
